@@ -1,0 +1,2561 @@
+{
+	"info": {
+		"_postman_id": "ea4745de-a0a2-4cec-bea0-050ec942efe1",
+		"name": "Tesis Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39833620"
+	},
+	"item": [
+		{
+			"name": "estudiantes",
+			"item": [
+				{
+					"name": "Asistencias",
+					"item": [
+						{
+							"name": "visualizar asistencias del estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_estudiante }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Programación\",\n\t\"paralelo\" : \"GR1\",\n\t\"semestre\": \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/estudiante/visualizar-asistencias",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"estudiante",
+										"visualizar-asistencias"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Actuaciones",
+					"item": [
+						{
+							"name": "Rol Docente",
+							"item": [
+								{
+									"name": "listar estudiantes presentes",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"followRedirects": true,
+										"disableUrlEncoding": false,
+										"disableCookies": false
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{ _.token_docente }}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "User-Agent",
+												"value": "insomnia/10.0.0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"materia\": \"Programación\",\n\t\"paralelo\" : \"GR1\",\n\t\"semestre\": \"2024-B\"\n}\t",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{url_backend}}/api/actuacion/listar-estudiantes",
+											"host": [
+												"{{url_backend}}"
+											],
+											"path": [
+												"api",
+												"actuacion",
+												"listar-estudiantes"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "visualizar actuaciones del estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_estudiante }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Programación\",\n\t\"paralelo\" : \"GR1\",\n\t\"semestre\": \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/estudiante/visualizar-actuaciones",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"estudiante",
+										"visualizar-actuaciones"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Curso",
+					"item": [
+						{
+							"name": "Visualizar Curso del estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_estudiante }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/estudiante/visualizar-cursos",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"estudiante",
+										"visualizar-cursos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "codigo para ingresar a curso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_estudiante }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"codigo\" : \"zxcv\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/estudiante/ingresar-codigo",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"estudiante",
+										"ingresar-codigo"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "visualizar perfil",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token_estudiante}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/perfil",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"perfil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar perfil",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ _.token_estudiante }}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fotografia",
+									"type": "file",
+									"src": "C:\\Users\\benca\\Downloads\\New-Android-logo-2023-1200x900.jpg"
+								},
+								{
+									"key": "nombre",
+									"value": "Pepito"
+								},
+								{
+									"key": "apellido",
+									"value": "Perez"
+								},
+								{
+									"key": "direccion",
+									"value": "Av.Venezuela"
+								},
+								{
+									"key": "ciudad",
+									"value": "Mejia"
+								},
+								{
+									"key": "telefono",
+									"value": "098765432"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/modificar-perfil/6726eb9a953a42aed8193dab",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"modificar-perfil",
+								"6726eb9a953a42aed8193dab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nueva password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\":\"555\",\n\t\"confirmarPassword\":\"555\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/nueva-password/7wbq1f7hr5n",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"nueva-password",
+								"7wbq1f7hr5n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmar recuperar password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/recuperar-password/7wbq1f7hr5n",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"recuperar-password",
+								"7wbq1f7hr5n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recuperar password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"vpl1689yao@expressletter.net\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/recuperar-password",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"recuperar-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login estudiante",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"pm.environment.set(\"token_estudiante\", response.token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.1.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"jakoh88401@gianes.com\",\n\t\"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/login",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmar email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/confirmar/d",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"confirmar",
+								"d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro estudiante",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fotografia",
+									"type": "file",
+									"src": "C:\\Users\\benca\\Downloads\\WhatsApp Image 2024-06-18 at 10.05.41 AM.jpeg"
+								},
+								{
+									"key": "nombre",
+									"value": "Link"
+								},
+								{
+									"key": "apellido",
+									"value": "SinNombre"
+								},
+								{
+									"key": "cedula",
+									"value": "17123412251"
+								},
+								{
+									"key": "email",
+									"value": "noisy.quokka.smsy@flashpost.net"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								},
+								{
+									"key": "fecha_nacimiento",
+									"value": "2003-01-22"
+								},
+								{
+									"key": "direccion",
+									"value": "Av. Ecuador"
+								},
+								{
+									"key": "ciudad",
+									"value": "Quito"
+								},
+								{
+									"key": "telefono",
+									"value": "0921415210"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/estudiante/registro-estudiante",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"estudiante",
+								"registro-estudiante"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "docentes",
+			"item": [
+				{
+					"name": "gestionar actuaciones",
+					"item": [
+						{
+							"name": "visualizar reportes",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.1.1"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Tecnologias de Seguridad\",\n\t\"paralelo\" : \"GR2\",\n\t\"semestre\": \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/reporte",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"reporte"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar actuacion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/eliminar/66ecbe6f240fc0c1094136b5",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"eliminar",
+										"66ecbe6f240fc0c1094136b5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar actuaciones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Poo\",\n\t\"paralelo\": \"GR2\",\n\t\"semestre\": \"2024-B\",\n\t\"fecha\" : \"23/10/2024\",\n\t\"actuaciones\": [{\n\t\t\t\"id\" : \"6726edd6953a42aed8193deb\",\n\t\t\t\"cantidad_actuaciones\": \"1\",\n\t\t\t\"descripciones\": [\"hola\", \"cambiar\", \"datos\", \"algo\"]\n\t\t}, \n\t\t{\n\t\t\t\"id\" : \"6726ec78953a42aed8193dbf\",\n\t\t\t\"cantidad_actuaciones\": \"2\",\n\t\t\t\"descripciones\": [\"pruebas\", \"amarillo\"]\n\t\t}]\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/actualizar",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"actualizar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar una actuacion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"cantidad_actuaciones\": \"2\",\n\t\"descripciones\": [\"1 advertencia\", \"2 advertencia\"],\n\t\"fecha_actuaciones\": \"26/10/2024\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/actualizar/6726ecef953a42aed8193dca",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"actualizar",
+										"6726ecef953a42aed8193dca"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar una actuacion",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/visualizar/6726ed3c953a42aed8193dd5",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"visualizar",
+										"6726ed3c953a42aed8193dd5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar actuaciones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\": \"Poo\",\n\t\"paralelo\" : \"GR2\",\n\t\"semestre\": \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/actuacion/visualizar",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"actuacion",
+										"visualizar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionar asistencias",
+					"item": [
+						{
+							"name": "visualizar reportes",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Algoritmos Y Estructuras De Datos\",\n\t\"paralelo\" : \"GR1\",\n\t\"semestre\": \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/asistencia/reporte",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"asistencia",
+										"reporte"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar asistencia",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/asistencia/eliminar/df",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"asistencia",
+										"eliminar",
+										"df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar asistencia",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Tecnologias de Seguridad\",\n\t\"paralelo\" : \"GR1\",\n\t\"semestre\": \"2024-B\",\n\t\"fecha\": \"23/10/2024\",\n\t\"estudiantes\": [{\n\t\t\t\"asistenciaId\": \"672fd39ccd2811afa9465f4a\",\n\t\t\t\"estudianteId\": \"6726ec1f953a42aed8193db2\",\n\t\t\t\"estado\": \"presente\"\n\t\t}\n\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/asistencia/actualizar",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"asistencia",
+										"actualizar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar una asistencia",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/asistencia/visualizar/6726ec78953a42aed8193dbd",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"asistencia",
+										"visualizar",
+										"6726ec78953a42aed8193dbd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar asistencias",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Poo\",\n\t\"paralelo\" : \"GR2\",\n\t\"semestre\" : \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/asistencia/visualizar",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"asistencia",
+										"visualizar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionar estudiantes",
+					"item": [
+						{
+							"name": "actualizar datos personales",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"direccion\" : \"Av. Madagascar\",\n\t\"ciudad\" : \"Uganda\",\n\t\"telefono\" : \"09564874\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/docente/actualizar-datos-personales/estudiante/66f5f46d52a0e00b6fbb4b31",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"actualizar-datos-personales",
+										"estudiante",
+										"66f5f46d52a0e00b6fbb4b31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "eliminar estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/docente/eliminar/estudiante/673580031a2b638e6051fbb8?cid=67376ee650b83df996254fc2",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"eliminar",
+										"estudiante",
+										"673580031a2b638e6051fbb8"
+									],
+									"query": [
+										{
+											"key": "cid",
+											"value": "67376ee650b83df996254fc2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nombre\" : \"PEDRO\",\n\t\"apellido\" : \"AZURE\",\n\t\"direccion\": \"Av. Peru\",\n\t\"telefono\": \"0912345\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/docente/actualizar/estudiante/6739615c450549a8874aafac",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"actualizar",
+										"estudiante",
+										"6739615c450549a8874aafac"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar un estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/docente/visualizar/estudiante/6726e9de953a42aed8193d9d",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"visualizar",
+										"estudiante",
+										"6726e9de953a42aed8193d9d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar estudiantes",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"materia\" : \"Poo\",\n\t\"paralelo\" : \"GR2\",\n\t\"semestre\" : \"2024-B\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/docente/visualizar/estudiantes",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"visualizar",
+										"estudiantes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear estudiante",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/docente/crear/estudiante",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"docente",
+										"crear",
+										"estudiante"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "gestionar cursos",
+					"item": [
+						{
+							"name": "eliminar curso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/curso/eliminar/6726cdb270640b696c593299",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"curso",
+										"eliminar",
+										"6726cdb270640b696c593299"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizar curso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"horario\" : \"13-16\",\n\t\"paralelo\":\"GR2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/curso/actualizar/672fd107d454e95a8d9d809b",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"curso",
+										"actualizar",
+										"672fd107d454e95a8d9d809b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar un curso",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"url": {
+									"raw": "{{url_backend}}/api/curso/visualizar/672fd107d454e95a8d9d809b",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"curso",
+										"visualizar",
+										"672fd107d454e95a8d9d809b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "visualizar cursos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token_docente}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"docenteId\" : \"6706a9af94c903cddf1d8319\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/curso/visualizar",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"curso",
+										"visualizar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "crear cursos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"followRedirects": true,
+								"disableUrlEncoding": false,
+								"disableCookies": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{ _.token_docente }}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/10.0.0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"codigo\": \"ARF77\",\n\t\"paralelo\": \"GR1\",\n\t\"materia\": \"Tecnologias de Seguridad\",\n\t\"semestre\" : \"2024-B\",\n\t\"horario\" : \"17-19\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_backend}}/api/curso/registro",
+									"host": [
+										"{{url_backend}}"
+									],
+									"path": [
+										"api",
+										"curso",
+										"registro"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "modificar perfil",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ _.token_estudiante }}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\" : \"MIGUEL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/docente/modificar-perfil/66e38712e50b09d0ca0b4e78",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"modificar-perfil",
+								"66e38712e50b09d0ca0b4e78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "nueva password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"1234\",\n\t\"confirmarPassword\": \"1234\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/docente/nueva-password/d19f92byptp",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"nueva-password",
+								"d19f92byptp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmar recuperar password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"url": {
+							"raw": "{{url_backend}}/api/docente/recuperar-password/ad",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"recuperar-password",
+								"ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recuperar password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"diwip15820@esterace.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/docente/recuperar-password",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"recuperar-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login docente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"pm.environment.set(\"token_docente\", response.token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"dilan@hotmail.com\",\n\t\"password\" : \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/docente/login",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmar email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"url": {
+							"raw": "{{url_backend}}/api/docente/confirmar/pzmjw4qh4tm",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"confirmar",
+								"pzmjw4qh4tm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro docente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/10.0.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\" : \"Juan\",\n\t\"apellido\": \"Perez\",\n\t\"ciudad\": \"Quito\",\n\t\"direccion\": \"Av.Amazonas\",\n\t\"email\": \"dilan@hotmail.com\",\n\t\"password\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_backend}}/api/docente/registro-docente",
+							"host": [
+								"{{url_backend}}"
+							],
+							"path": [
+								"api",
+								"docente",
+								"registro-docente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token_estudiante",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Mzk1Y2Y4NDUwNTQ5YTg4NzRhYWY5OSIsInJvbCI6ImVzdHVkaWFudGUiLCJpYXQiOjE3MzIwMjcyNTQsImV4cCI6MTczMjExMzY1NH0.xVwLOZDzkcfEvaF8H67nePpEAateVkPJWbKol6rzx2c",
+			"disabled": true
+		},
+		{
+			"key": "token_docente",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Mzc2N2U1Y2VkOGMyMTI1OTEwMWM5OCIsInJvbCI6ImRvY2VudGUiLCJpYXQiOjE3MzIxMDk5MTksImV4cCI6MTczMjE5NjMxOX0.K_5d3YKMpJoqx7wn0hWWlrC3SBCYbI3R8QGI-UF2CJI",
+			"disabled": true
+		}
+	]
+}
